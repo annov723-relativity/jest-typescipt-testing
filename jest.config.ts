@@ -10,7 +10,7 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1', // Adjust this based on your project's directory structure
   },
-  testMatch: ['<rootDir>/**/*.test.(ts|tsx|js|jsx)'],
+  testMatch: ['<rootDir>/**/*.test.(ts|tsx|js|jsx)'], //to find tests
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.json', // Adjust if your tsconfig file is located elsewhere

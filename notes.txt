@@ -1,0 +1,11 @@
+1. npm install
+2. npm test
+3. create jest.config.ts
+4. keywords:
+    - Describe/Suite (group for organization, can be nested)
+    - It/Test (one test)
+    - Expect (assert)
+    - Before/After (beforeEach runs before every test in the block)
+    - Matchers (ex. toBeNumber, toBeLessThan)
+
+5. test augmentation - many caes for 1 test
