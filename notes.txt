@@ -9,3 +9,23 @@
     - Matchers (ex. toBeNumber, toBeLessThan)
 
 5. test augmentation - many caes for 1 test
+6. to run tests which import something add 
+    "compilerOptions": {
+        "jsx": "react",
+        "esModuleInterop": true
+    }
+    to tsconfig.json file
+7. Mocking = adding new files with methods copied but constant behaviour defined
+8. For snapshot tests package.json has to be updated:
+    "jest":{
+        "testEnvironment": "jsdom"
+    },
+
+    install:
+        npm i jest-environment-jsdom --save-dev
+        npm install @testing-library/react @types/testing-library__react --save-dev
+
+    update jest.config.ts:
+        testEnvironment: 'jsdom',
+
+    when snapshot should be updated use npm test -- -u

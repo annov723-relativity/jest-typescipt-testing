@@ -1,5 +1,9 @@
 import './App.css'
-import { CartItem, useItems, getItemsTotal } from './utils'
+import { CartItemsDisplay } from './components/CarItemsDisplay'
+import { getItemsTotal, CartItem } from './etc/get-items-total'
+import { useItems } from './utils'
+import React from "react"
+// import { CartItem, useItems, getItemsTotal } from './utils'
 
 function App() {
   const shoppingCartItems : CartItem[] = useItems()

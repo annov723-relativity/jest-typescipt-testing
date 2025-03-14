@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getConversionMap } from './effects';
+// import { getConversionMap } from './effects';
+// import { CartItem } from './etc/get-items-total';
 import { CartItem } from './etc/get-items-total';
+import { Currency, convertCurrency } from './convertCurrency';
 
 export function useItems(
   rootCurrency = Currency.USD,

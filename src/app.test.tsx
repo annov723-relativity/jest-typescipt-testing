@@ -1,13 +1,18 @@
-import {getItemsTotal} from "./etc/get-items-total"
+import React from "react"
+import { render } from "@testing-library/react"
+import { CartItemsDisplay } from "./components/CarItemsDisplay"
+import { CartItem } from "./etc/get-items-total"
 
-describe("The application",()=>{
-  it.todo("should display the correct output") //so it is passed with adnotation it is "TO DO"
+describe("The Cart Item Display", () => {
+    it("Should match the snapshot", () => {
+        const specItems : CartItem[] = [
+            {name: "item1", cost: 1},
+            {name: "item2", cost: 2}
+        ]
 
-  describe("Get items total", ()=>{
-    const specitems = [
-      {name: "item 1", cost: 100},
-      {name: "item 2", cost: 200},
-      {name: "item 3", cost: 300}
-    ]
-  })
+        const { container } = render(<CartItemsDisplay shoppingCartItems={specItems} />)
+        console.info(container)
+
+        expect(container).toMatchSnapshot()
+    })
 })
